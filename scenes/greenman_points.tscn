@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://greenman.png" type="Texture" id=1]
-[ext_resource path="res://Greenman.gd" type="Script" id=2]
-[ext_resource path="res://points_button.gd" type="Script" id=3]
-[ext_resource path="res://resources/Fira Sans Theme.tres" type="Theme" id=4]
-[ext_resource path="res://speechbubble.png" type="Texture" id=5]
+[ext_resource path="res://images/greenman.png" type="Texture" id=1]
+[ext_resource path="res://images/speechbubble.png" type="Texture" id=2]
+[ext_resource path="res://resources/Fira Sans Theme.tres" type="Theme" id=3]
+[ext_resource path="res://scripts/Greenman.gd" type="Script" id=4]
+[ext_resource path="res://scripts/points_button.gd" type="Script" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 18.4011
@@ -14,7 +14,7 @@ radius = 18.4011
 [node name="Greenman" type="KinematicBody2D" parent="."]
 position = Vector2( 512, 300 )
 scale = Vector2( 5, 5 )
-script = ExtResource( 2 )
+script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Greenman"]
 position = Vector2( -0.800003, 0 )
@@ -32,7 +32,7 @@ margin_left = 147.0
 margin_top = 407.0
 margin_right = 871.0
 margin_bottom = 504.0
-theme = ExtResource( 4 )
+theme = ExtResource( 3 )
 text = "GREETINGS MORTAL"
 
 [node name="Panel" type="Panel" parent="Label"]
@@ -52,9 +52,9 @@ margin_top = 128.0
 margin_right = 758.0
 margin_bottom = 246.0
 rect_scale = Vector2( 0.5, 0.5 )
-theme = ExtResource( 4 )
+theme = ExtResource( 3 )
 text = "1 point"
-script = ExtResource( 3 )
+script = ExtResource( 5 )
 
 [node name="Label2" type="Label" parent="."]
 modulate = Color( 0.290196, 0.952941, 0.188235, 1 )
@@ -66,7 +66,7 @@ margin_left = 147.0
 margin_top = 492.0
 margin_right = 871.0
 margin_bottom = 589.0
-theme = ExtResource( 4 )
+theme = ExtResource( 3 )
 text = "0"
 align = 1
 
@@ -76,7 +76,7 @@ margin_left = 611.0
 margin_top = 60.0
 margin_right = 861.0
 margin_bottom = 310.0
-texture = ExtResource( 5 )
+texture = ExtResource( 2 )
 
 [node name="Label3" type="Label" parent="speech_nice"]
 modulate = Color( 0.184314, 0.184314, 0.184314, 1 )
@@ -88,7 +88,7 @@ margin_left = -358.0
 margin_top = -205.0
 margin_right = 366.0
 margin_bottom = -108.0
-theme = ExtResource( 4 )
+theme = ExtResource( 3 )
 text = "Nice."
 align = 1
 
