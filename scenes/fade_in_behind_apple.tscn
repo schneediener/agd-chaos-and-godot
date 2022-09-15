@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://images/greenman.png" type="Texture" id=1]
+[ext_resource path="res://images/apple.png" type="Texture" id=2]
+[ext_resource path="res://scenes/apple_greenman.gd" type="Script" id=3]
+
+[node name="fade_in_behind_apple" type="Node2D"]
+
+[node name="Greenman" type="Sprite" parent="."]
+modulate = Color( 0.858824, 0.858824, 0.858824, 0 )
+position = Vector2( 523, 206 )
+scale = Vector2( 17.1, 17.1 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Apple" type="Sprite" parent="."]
+position = Vector2( 709, 407 )
+scale = Vector2( 8.01, 8.01 )
+texture = ExtResource( 2 )
