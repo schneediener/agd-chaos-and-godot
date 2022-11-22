@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://images/greenman.png" type="Texture" id=1]
 [ext_resource path="res://images/speechbubble.png" type="Texture" id=2]
 [ext_resource path="res://resources/Fira Sans Theme.tres" type="Theme" id=3]
 [ext_resource path="res://scripts/Greenman.gd" type="Script" id=4]
 [ext_resource path="res://scripts/points_button.gd" type="Script" id=5]
+[ext_resource path="res://resources/Audio/Music/SevenCroissantsOnARainyDay.wav" type="AudioStream" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 18.4011
@@ -91,5 +92,9 @@ margin_bottom = -108.0
 theme = ExtResource( 3 )
 text = "Nice."
 align = 1
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
 
 [connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_TextureButton_pressed"]
